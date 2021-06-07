@@ -1,14 +1,13 @@
 .stars {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-column-gap: 4px;
+  padding-right: 7px;
 
   &__star {
     width: 15px;
     height: 15px;
     background: url(../images/star-active.svg) no-repeat center;
-
-    &:not(:last-child) {
-      margin-right: 4px;
-    }
   }
 
   .stars--0 &__star:nth-child(n),

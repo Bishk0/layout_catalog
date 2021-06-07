@@ -1,10 +1,12 @@
 .container {
   &__content {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    max-width: 1024px;
-    margin: 0 auto;
-    padding: 0 40px;
+    display: grid;
+    grid-row-gap: 50px;
+    grid-column-gap: 48px;
+    grid-template-columns: repeat(4, 200px);
+    justify-content: center;
+    @media (max-width: 1024px) {
+      grid-template-columns: repeat(auto-fit, 200px);
+    }
   }
 }
